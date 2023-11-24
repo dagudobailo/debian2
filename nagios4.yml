@@ -1,0 +1,10 @@
+---
+- name: Instalar Nagios
+  hosts: planeta.pruebas.urjc.es
+  become: true
+  remote_user: root
+  tasks:
+    - name: nagios4
+      apt:
+        name: nagios4
+        state: latest
